@@ -187,7 +187,11 @@ Now the ``CompiledSortedBeds.bed`` file contains coordinates of regions that hav
 >``-i /dss/dsslegfs01/pr53da/pr53da-dss-0029/DeNovoRef/Coverage_Folder/CompiledSortedBeds.bed \``\
 >``> CompiledSortedMergedBeds.bed``
 
-This file can now be used to calculate coverages for regions specified by each line in the .bed file. When calculating coverage in baited regions for transcriptome
+This file can now be used to calculate coverages for regions specified by each line in the .bed file. When calculating coverage in baited regions for transcriptome the script looks as follows:
+
+>``bedtools coverage -a CompiledSortedMergedBeds.bed -b BamFileUsed.bam > Coverages.bed``
+
+In order to calculate the coverage per base pair ``-d`` command must be added into the script.
 ___
 
 ## ANGSD
